@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Text fill="WHITE" layoutX="350.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN ZONE" wrappingWidth="257.5999813079834">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="gsondage" layoutX="330.0" layoutY="120.0" mnemonicParsing="false" onAction="#ToAdminSondageENG" prefHeight="30.0" prefWidth="260.0" text="Survey management" />
+        <Button fx:id="gblog" layoutX="330.0" layoutY="180.0" mnemonicParsing="false" onAction="#ToMenuBlogENG" prefHeight="30.0" prefWidth="260.0" text="Blogs management" />
+        <Button fx:id="gwiki" layoutX="330.0" layoutY="240.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="260.0" text="Wikis management" />
+        <Button fx:id="gsystem" layoutX="330.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="260.0" text="System management" />
+        <Pane prefHeight="400.0" prefWidth="218.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="ajt" layoutX="18.0" layoutY="348.0" mnemonicParsing="false" onAction="#AjouterAdmin" prefHeight="20.0" prefWidth="54.0" style="-fx-background-color: #2d3447;" text="Add" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="supp" layoutX="95.0" layoutY="348.0" mnemonicParsing="false" onAction="#supprimerAdmin" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #2d3447;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="nom" layoutX="18.0" layoutY="122.0" prefHeight="30.0" prefWidth="180.0" promptText="First Name" />
+                <Button fx:id="gcompte" layoutX="52.0" layoutY="33.0" mnemonicParsing="false" onAction="#ToReglageCompteENG" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: #2d3447;" text="Edit Profile" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@reg.jpg" />
+                    </image>
+                </ImageView>
+            <TextField fx:id="nom1" layoutX="18.0" layoutY="76.0" prefHeight="30.0" prefWidth="180.0" promptText="Name" />
+            <PasswordField fx:id="password" layoutX="18.0" layoutY="210.0" prefHeight="30.0" prefWidth="180.0" promptText="Password" />
+            <Text layoutX="31.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe" />
+            <Text layoutX="26.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Langue" />
+            <JFXComboBox layoutX="74.0" layoutY="253.0" onAction="#sexeCombo" prefHeight="15.0" prefWidth="117.0" />
+            <JFXComboBox layoutX="83.0" layoutY="294.0" onAction="#combolanrc" prefHeight="15.0" prefWidth="117.0" />
+            <TextField fx:id="nom2" layoutX="18.0" layoutY="162.0" prefHeight="30.0" prefWidth="180.0" promptText="Email" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

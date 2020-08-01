@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="700.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text fill="WHITE" layoutX="350.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZONE ADMIN" wrappingWidth="257.5999813079834">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="gsondage" layoutX="330.0" layoutY="120.0" mnemonicParsing="false" onAction="#ToAdminSondage" prefHeight="30.0" prefWidth="260.0" text="Gestion des sondages" />
+      <Button fx:id="gblog" layoutX="330.0" layoutY="180.0" mnemonicParsing="false" onAction="#ToMenuBlog" prefHeight="30.0" prefWidth="260.0" text="Gestion des blogs" />
+      <Button fx:id="gwiki" layoutX="330.0" layoutY="240.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="260.0" text="Gestion des wikis" />
+      <Button fx:id="gsystem" layoutX="330.0" layoutY="300.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="260.0" text="Gestion du système" />
+      <Pane prefHeight="420.0" prefWidth="218.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="supp" layoutX="10.0" layoutY="371.0" mnemonicParsing="false" onAction="#supprimerAdmin" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #2d3447;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nom" layoutX="18.0" layoutY="90.0" prefHeight="30.0" prefWidth="180.0" promptText="Nom" />
+            <Button fx:id="gcompte" layoutX="45.0" layoutY="34.0" mnemonicParsing="false" onAction="#ToReglageCompte" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #2d3447;" text="Gestion du compte" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@reg.jpg" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="password" layoutX="18.0" layoutY="224.0" prefHeight="30.0" prefWidth="180.0" promptText="Mot de passe" />
+            <Button layoutX="124.0" layoutY="371.0" mnemonicParsing="false" onAction="#AjouterAdmin" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #2d3447;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="31.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe" />
+            <Text layoutX="26.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Langue" />
+            <JFXComboBox fx:id="sexe" editable="true" layoutX="74.0" layoutY="267.0" onAction="#sexeCombo" prefHeight="15.0" prefWidth="117.0" />
+            <JFXComboBox fx:id="langue" editable="true" layoutX="83.0" layoutY="308.0" onAction="#combolanrc" prefHeight="15.0" prefWidth="117.0" />
+            <TextField fx:id="mail" layoutX="18.0" layoutY="180.0" prefHeight="30.0" prefWidth="180.0" promptText="Email" />
+            <TextField fx:id="prenom" layoutX="18.0" layoutY="130.0" prefHeight="30.0" prefWidth="180.0" promptText="Prenom" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
